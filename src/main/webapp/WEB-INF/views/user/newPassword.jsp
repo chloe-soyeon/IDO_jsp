@@ -7,6 +7,20 @@
     // 비밀번호 재설정 접속 가능한지 체크
     String newPassword = CmmUtil.nvl((String) session.getAttribute("NEW_PASSWORD"));
 
+//    String inputCommand = "안녕하세요"; // 정답데이터 들어가는 자리 (서버에서 받아오는 데이터)
+//
+//    String quizResult = "";
+//    String annyangOutputData = ""; // annyang이 돌려주는 데이터
+//
+//    // annyang.js 호출하는 코드
+//    {}
+//
+//    // 입력받은 데이터랑 가져온 정답 데이터랑 일치하는지 확인하는 로직 + 정답이면 정답, 오답이면 오답
+//    if(annyangOutputData == "안녕하세요") {
+//        alert("정답입니다");
+//        quizResult = "정답";
+//    }
+
     String msg = "";
 
     if (CmmUtil.nvl(rDTO.getUserId()).length() > 0) { // 아이디 찾기 성공

@@ -64,7 +64,7 @@
         EMAIL
         FROM USER_INFO
         WHERE 1=1
-        <if test="userId neq null and userId neq '' "> <!--비밀번호 찾기라면, user_id 조회 추가 -->
+        <if test="userId != null and userId != '' "> <!--비밀번호 찾기라면, user_id 조회 추가 -->
             AND USER_ID = #{userId}
         </if>
         AND USER_NAME = #{userName}
