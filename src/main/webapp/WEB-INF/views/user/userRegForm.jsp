@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>회원가입 화면</title>
+    <title>IDO 회원가입</title>
 <%--    <link rel="stylesheet" href="/css/table.css"/>--%>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -13,7 +13,6 @@
     <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="/js/main.js"></script>
 
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
@@ -205,7 +204,7 @@
             // Ajax 호출해서 회원가입하기
             $.ajax({
                     url: "/user/insertUserInfo",
-                    type: "post", // 전송방식은 Post
+                    type: "post", // 전송방식은 Posts
                     dataType: "JSON", // 전송 결과는 JSON으로 받기
                     data: $("#f").serialize(), // form 태그 내 input 등 객체를 자동으로 전송할 형태로 변경하기
                     success: function (json) { // /notice/noticeUpdate 호출이 성공했다면..
@@ -216,6 +215,7 @@
 
                         } else { // 회원가입 실패
                             alert(json.msg); // 메시지 띄우기
+                            location.href="/index"
                         }
 
                     }
@@ -242,7 +242,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -255,8 +255,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -517,7 +517,7 @@
 
                     <!--        <button id="signup" type="button" style="margin-top: 15px; width: 192px; height: 32px; flex-shrink: 0; border-radius: 50px; border: 1px solid #000; background: #54A1FC; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);">전송</button>-->
                     <!--    </form>-->
-                    <form action="/user/joinProc" method="post" onsubmit="return doSubmit(this)" id="f">
+                    <form id="f">
 
                         <div class="login-input">
                             <input name="userId" placeholder="아이디" id="userId" type="text"
@@ -589,7 +589,7 @@
                             <!--                                   placeholder="상세 주소를 입력하세요"-->
                             <!--                                   style="width:185px; height: 50px; border-radius:10px; border: none; margin-left: 12px; display: inline;font-family: 'TmoneyRoundWindExtraBold';">-->
                         </div>
-                        <button id="signup" type="submit"
+                        <button id="btnSend" type="button"
                                 style="margin-top: 15px;  width: 260px; height: 55px; flex-shrink: 0; border-radius: 50px; border: none; background: #0d6efd; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);font-family: 'TmoneyRoundWindExtraBold'; font-size:25px; margin-top: 15px; display: flex; justify-content: center; align-items:center; margin-left:9%;">
                             회원가입
                         </button>
@@ -633,5 +633,7 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<script src="/js/main.js"></script>
+
 </body>
 </html>

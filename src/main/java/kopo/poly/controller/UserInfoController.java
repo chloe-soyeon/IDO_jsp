@@ -29,11 +29,11 @@ public class UserInfoController {
     /**
      * 회원가입 화면으로 이동
      */
-    @GetMapping(value = "userRegForm")
+    @GetMapping(value = "/userRegForm")
     public String userRegForm() {
         log.info("{}.user/userRegForm", this.getClass().getName());
 
-        return "/user/userRegForm";
+        return "user/userRegForm";
     }
 
     /**
