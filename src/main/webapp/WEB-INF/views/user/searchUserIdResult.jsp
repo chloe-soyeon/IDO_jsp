@@ -7,7 +7,7 @@
     String msg = "";
 
     if (CmmUtil.nvl(rDTO.getUserId()).length() > 0) { // 아이디 찾기 성공
-        msg = CmmUtil.nvl(rDTO.getUserName()) + " 회원님의 " + CmmUtil.nvl(rDTO.getUserId()) + "입니다.";
+        msg = CmmUtil.nvl(rDTO.getUserName()) + " 회원님의 아이디는" + CmmUtil.nvl(rDTO.getUserId()) + "입니다.";
 
     } else {
         msg = "아이디가 존재하지 않습니다.";

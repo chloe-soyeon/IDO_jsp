@@ -342,9 +342,9 @@
                     <div class="login-input"><input name="userId" placeholder="아이디" id="userId" type="text" style="width:250px; height: 50px; border-radius:10px; border: none; font-family: 'TmoneyRoundWindExtraBold'; "></div><br>
                     <div class="login-input"><input name="password" placeholder="비밀번호" id="userPassword" type="password" style="width:250px; height: 50px; border-radius:10px; border: none; font-family: 'TmoneyRoundWindExtraBold'; "></div><br>
                     <div id="signUp">
-                        <a href="/user/join" class="gotojoin"><span class="signUp" style="font-family: 'TmoneyRoundWindExtraBold'; margin-left:38%;" id="btnUserReg">회원가입</span></a>
+                        <a  class="gotojoin"><span class="signUp" style="font-family: 'TmoneyRoundWindExtraBold'; margin-left:38%;" id="btnUserReg">회원가입</span></a>
                     </div>
-                    <button id="btnLogin" type="button" style="margin-top: 15px; width: 250px; height: 45px; flex-shrink: 0; border-radius: 50px; border: none; background: #0d6efd; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); font-family: 'TmoneyRoundWindExtraBold';">로그인</button>
+                    <button id="btnLogin" type="button" style="margin-top: 15px; width: 250px; height: 45px; color:white; flex-shrink: 0; border-radius: 50px; border: none; background: #0d6efd; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); font-family: 'TmoneyRoundWindExtraBold';">로그인</button>
 
                 </form>
                 <div id="forgot">
